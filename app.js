@@ -12,6 +12,10 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cors());
+
+// Front end
+app.use(express.static(path.join(__dirname, "public")));
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
